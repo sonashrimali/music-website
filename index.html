@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="sonal.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>MY MUSIC WEBSITE</h1>
+        <div class="music-player">
+            <div class="wrapper">
+                <div class="details">
+                    <div class="now-playing">song</div>
+                    <div class="track-art"></div>
+                    <img src="images/music-img.jpg" class="song-img" alt="Song Art">
+                    <div class="track-name">track name</div>
+                    <div class="track-artist">track artist</div>
+                </div>
+                <br/>
+
+                <!-- Slider containers -->
+                <div class="slider_container">
+                    <div class="current-time">00:00</div>
+                    <input type="range" min="0" max="100" value="0" class="seek-slider" onchange="seekTo()">
+                    <div class="total-duration">00:00</div>
+                </div>
+                <div class="slider_container">
+                    <i class="fa fa-volume-down"></i>
+                    <input type="range" min="0" max="100" value="100" class="volume-slider" onchange="setVolume()">
+                    <i class="fa fa-volume-up"></i>
+                </div>
+                <br>
+
+                <!-- Music control buttons -->
+                <div class="buttons">
+                    <div class="random-track">
+                        <i class="fas fa-random fa-2x" title="random"></i>
+                    </div>
+                    <div class="prev-track" onclick="prevTrack()">
+                        <i class="fas fa-step-backward fa-2x"></i>
+                    </div>
+                    <div class="playpause-track" onclick="playpauseTrack()">
+                        <i class="fas fa-play-circle fa-5x"></i>
+                    </div>
+                    <div class="next-track" onclick="nextTrack()">
+                        <i class="fas fa-step-forward fa-2x"></i>
+                    </div>
+                    <div class="repeat-track">
+                        <i class="fa fa-repeat fa-2x" title="repeat"></i>
+                    </div>
+               </div>
+            
+             <div id="wave">
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
